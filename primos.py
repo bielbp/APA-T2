@@ -36,3 +36,20 @@ def esPrimo(numero,):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
+
+
+def primos(numero,):
+    """
+    Devuelve una **tupla** con todos los números primos menores que su argumento.
+    """
+    llista = []
+    for prova in range(2, numero):
+        if esPrimo(prova) == True:
+            llista.append(prova)
+    return tuple(llista) 
+
+
+def descompon(numero):
+    """
+    Devuelve una **tupla** con la descomposición en factores primos de su argumento.
+    """
