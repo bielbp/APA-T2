@@ -53,3 +53,14 @@ def descompon(numero):
     """
     Devuelve una **tupla** con la descomposición en factores primos de su argumento.
     """
+    factors = []
+    for primo in primos(numero):
+        while numero % primo == 0:
+            factors.append(primo)
+            numero = numero // primo
+        if numero ==1:
+            break
+    return tuple(factors)
+
+
+
